@@ -59,11 +59,11 @@ class FileBrowserApp(QMainWindow):
                     file_path = os.path.join(root, file)
                     if not self.is_text_file(file_path):
                         continue
-                    output_file.write(f'文件名：{file}\n')
-                    output_file.write(f'绝对路径：{file_path}\n')
+                    output_file.write(f'File Name：{file}\n')
+                    output_file.write(f'File Path：{file_path}\n')
                     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                         content = f.read(1024)  # Read first 1024 characters
-                    output_file.write(f'内容：\n{content}\n\n')
+                    output_file.write(f'Content：\n{content}\n\n')
 
     def is_text_file(self, file_path):
         try:
